@@ -2,7 +2,7 @@
 
 A native macOS menu bar app for controlling [Volumio](https://volumio.com) music servers on your local network.
 
-<img width="321" height="488" alt="image" src="https://github.com/user-attachments/assets/2fc0f8c5-ff15-4d10-a7b5-71a51202207c" />
+<img width="318" height="487" alt="image" src="https://github.com/user-attachments/assets/34726095-4a62-4409-a25d-6f58e2375f18" />
 
 ## Features
 
