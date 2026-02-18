@@ -5,6 +5,7 @@ import AppKit
 final class FusionDSPService {
     var isInstalled = false
     var isActive = false
+    var isEffectEnabled = false
     var dspType: String = ""
     var presets: [DSPPreset] = []
     var currentPreset: DSPPreset?
@@ -29,6 +30,7 @@ final class FusionDSPService {
     func reset() {
         isInstalled = false
         isActive = false
+        isEffectEnabled = false
         dspType = ""
         presets = []
         currentPreset = nil
@@ -73,6 +75,12 @@ final class FusionDSPService {
             self.dspType = dspTypeValue
         }
 
+        // Effect enabled state: if a "disableeffect" button exists, the effect is currently ON.
+        // If an "enableeffect" button exists, the effect is currently OFF.
+        self.isEffectEnabled = sections.contains { section in
+            sectionContainsField(section, id: "disableeffect")
+        }
+
         guard supportsPresets else { return }
 
         // Preset section (field id: "usethispreset")
@@ -105,6 +113,17 @@ final class FusionDSPService {
     private func sectionContainsField(_ section: [String: Any], id: String) -> Bool {
         guard let content = section["content"] as? [[String: Any]] else { return false }
         return content.contains { $0["id"] as? String == id }
+    }
+
+    func setEffectEnabled(_ enabled: Bool) {
+        isEffectEnabled = enabled
+        connection?.callMethod(
+            endpoint: "audio_interface/fusiondsp",
+            method: enabled ? "enableeffect" : "disableeffect",
+            data: [:]
+        )
+        // Re-fetch UI config to sync state
+        fetchPresets()
     }
 
     func switchPreset(_ preset: DSPPreset) {

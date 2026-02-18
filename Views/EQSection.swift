@@ -10,7 +10,7 @@ struct EQSection: View {
                 withAnimation(.easeInOut(duration: 0.2)) { isExpanded.toggle() }
             } label: {
                 HStack {
-                    Text("EQ Preset (\(appState.fusionDSP.dspType))")
+                    Text("FusionDSP")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                         .textCase(.uppercase)
@@ -24,41 +24,54 @@ struct EQSection: View {
             .buttonStyle(.plain)
 
             if isExpanded {
-                if appState.fusionDSP.isLoading {
-                    HStack(spacing: 6) {
-                        ProgressView()
-                            .controlSize(.small)
-                        Text("Loading presets...")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                } else if appState.fusionDSP.supportsPresets {
-                    if appState.fusionDSP.presets.isEmpty {
-                        Text("No presets available")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    } else {
-                        presetPicker
-                    }
-                } else {
-                    Text("Presets not available for \(appState.fusionDSP.dspType)")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-
-                Button {
-                    appState.fusionDSP.openFusionDSPSettings()
-                } label: {
-                    HStack(spacing: 8) {
-                        Image(systemName: "slider.horizontal.3")
-                            .frame(width: 16, alignment: .center)
-                        Text("Open FusionDSP Settings")
-                    }
+                Toggle("Effect Enabled", isOn: effectEnabledBinding)
+                    .toggleStyle(.checkbox)
                     .font(.caption)
+
+                if appState.fusionDSP.isActive {
+                    if appState.fusionDSP.isLoading {
+                        HStack(spacing: 6) {
+                            ProgressView()
+                                .controlSize(.small)
+                            Text("Loading presets...")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    } else if appState.fusionDSP.supportsPresets {
+                        if appState.fusionDSP.presets.isEmpty {
+                            Text("No presets available")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        } else {
+                            presetPicker
+                        }
+                    } else {
+                        Text("Presets not available for \(appState.fusionDSP.dspType)")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+
+                    Button {
+                        appState.fusionDSP.openFusionDSPSettings()
+                    } label: {
+                        HStack(spacing: 8) {
+                            Image(systemName: "slider.horizontal.3")
+                                .frame(width: 16, alignment: .center)
+                            Text("Open FusionDSP Settings")
+                        }
+                        .font(.caption)
+                    }
+                    .buttonStyle(HoverButtonStyle())
                 }
-                .buttonStyle(HoverButtonStyle())
             }
         }
+    }
+
+    private var effectEnabledBinding: Binding<Bool> {
+        Binding(
+            get: { appState.fusionDSP.isEffectEnabled },
+            set: { appState.fusionDSP.setEffectEnabled($0) }
+        )
     }
 
     @ViewBuilder

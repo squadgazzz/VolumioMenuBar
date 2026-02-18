@@ -24,7 +24,9 @@ let package = Package(
                 "VolumioMenuBar.app",
                 "AppIcon.icns",
                 "Resources",
-                "build.sh"
+                "build.sh",
+                "LICENSE",
+                "README.md"
             ],
             sources: [
                 "App",
