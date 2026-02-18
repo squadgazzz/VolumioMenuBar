@@ -1,0 +1,26 @@
+# Swift / SPM build artifacts
+.build/
+
+# Xcode
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+xcuserdata/
+DerivedData/
+*.xcscmblueprint
+
+# Generated app bundle
+*.app/
+
+# JetBrains IDE
+.idea/
+
+# SwiftPM
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.swiftpm/xcode/xcuserdata/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Claude Code
+CLAUDE.md

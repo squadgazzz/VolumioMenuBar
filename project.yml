@@ -1,0 +1,44 @@
+name: VolumioMenuBar
+options:
+  bundleIdPrefix: com.volumio
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "16.0"
+
+packages:
+  SocketIO:
+    url: https://github.com/socketio/socket.io-client-swift
+    version: 16.1.1
+
+targets:
+  VolumioMenuBar:
+    type: application
+    platform: macOS
+    sources:
+      - path: App
+      - path: Models
+      - path: Services
+      - path: Views
+    resources:
+      - path: Resources/Assets.xcassets
+    settings:
+      base:
+        INFOPLIST_FILE: Info.plist
+        CODE_SIGN_ENTITLEMENTS: VolumioMenuBar.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.volumio.menubar
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "5.9"
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_HARDENED_RUNTIME: true
+    dependencies:
+      - package: SocketIO
+        product: SocketIO
+    info:
+      path: Info.plist
+      properties:
+        LSUIElement: true
+        NSBonjourServices:
+          - _Volumio._tcp
+        NSLocalNetworkUsageDescription: "Discovers Volumio devices on your network"

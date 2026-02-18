@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AFD4B260236197829A6496C /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CAA846D06B59702CB6EBD /* MenuBarContentView.swift */; };
+		1E1021D9546DEF0559D2F37E /* DSPPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F233B81E44AEB27DC41871A /* DSPPreset.swift */; };
+		28C627F15D32B56727839720 /* NowPlayingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7915211FCF4FF21688813C /* NowPlayingSection.swift */; };
+		298A6E2F4F9AF430DAAF14DB /* PlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F913F6A5DD643BB3EC676189 /* PlayerState.swift */; };
+		3190F13964D92A6357D740A7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680FAF33288F74B3A3DFDA67 /* AppState.swift */; };
+		458158E0C1B8EAFFDAA71BD4 /* VolumeControlSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAF7A5AAAD74920D5DC4592 /* VolumeControlSection.swift */; };
+		62215D69D3B4794E4D533CDA /* VolumioMenuBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D06FE4F5B4B7EF2F229C2 /* VolumioMenuBarApp.swift */; };
+		686B7901989721ECC9C6CBDD /* DevicePickerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE34E26650F2F46398F068A /* DevicePickerSection.swift */; };
+		6A5885F98DEAACBD8C1A6B12 /* FusionDSPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253613706EB3FF2F4BD85BD0 /* FusionDSPService.swift */; };
+		71699BCD9171B5FA281A4003 /* PlaybackControlsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D164E151736F3E0C04EFD78D /* PlaybackControlsSection.swift */; };
+		77E8655806FA772CBAC541C0 /* DeviceActionsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25592826CCCE0B88F5779905 /* DeviceActionsSection.swift */; };
+		B4A383D096CB0B66B9A8EE28 /* DeviceDiscoveryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF09F4CFB3BD6BCFE8E5BBB /* DeviceDiscoveryService.swift */; };
+		DCF227E730640B179E707DBF /* VolumioDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EEE15B5F3F516B45C5D1AF /* VolumioDevice.swift */; };
+		DDA5683476D0C9C76B018C79 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = B391964FA0AC80BC3F5E0282 /* SocketIO */; };
+		E16AF1837CD293A225622AB3 /* VolumioConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE2832DC6464FC1C98CF18A /* VolumioConnection.swift */; };
+		EC84A7261625703EB76471C0 /* EQSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB3ADC1A0FDF962C996F7B /* EQSection.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03A2AF1916790752C3D849B1 /* VolumioMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolumioMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EB3ADC1A0FDF962C996F7B /* EQSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQSection.swift; sourceTree = "<group>"; };
+		0BF09F4CFB3BD6BCFE8E5BBB /* DeviceDiscoveryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDiscoveryService.swift; sourceTree = "<group>"; };
+		1BAF7A5AAAD74920D5DC4592 /* VolumeControlSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeControlSection.swift; sourceTree = "<group>"; };
+		1F233B81E44AEB27DC41871A /* DSPPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSPPreset.swift; sourceTree = "<group>"; };
+		253613706EB3FF2F4BD85BD0 /* FusionDSPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionDSPService.swift; sourceTree = "<group>"; };
+		25592826CCCE0B88F5779905 /* DeviceActionsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActionsSection.swift; sourceTree = "<group>"; };
+		279CAA846D06B59702CB6EBD /* MenuBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContentView.swift; sourceTree = "<group>"; };
+		48EEE15B5F3F516B45C5D1AF /* VolumioDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumioDevice.swift; sourceTree = "<group>"; };
+		4AE2832DC6464FC1C98CF18A /* VolumioConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumioConnection.swift; sourceTree = "<group>"; };
+		5DE34E26650F2F46398F068A /* DevicePickerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePickerSection.swift; sourceTree = "<group>"; };
+		680FAF33288F74B3A3DFDA67 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		D164E151736F3E0C04EFD78D /* PlaybackControlsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlsSection.swift; sourceTree = "<group>"; };
+		DB5D06FE4F5B4B7EF2F229C2 /* VolumioMenuBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumioMenuBarApp.swift; sourceTree = "<group>"; };
+		EB7915211FCF4FF21688813C /* NowPlayingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingSection.swift; sourceTree = "<group>"; };
+		F913F6A5DD643BB3EC676189 /* PlayerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerState.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE0A0F219BBA3433C21C23B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA5683476D0C9C76B018C79 /* SocketIO in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05AC8CCF42028C039413E77B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0BF09F4CFB3BD6BCFE8E5BBB /* DeviceDiscoveryService.swift */,
+				253613706EB3FF2F4BD85BD0 /* FusionDSPService.swift */,
+				4AE2832DC6464FC1C98CF18A /* VolumioConnection.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		358BA6B323F0EECF52ADB43F = {
+			isa = PBXGroup;
+			children = (
+				DEEDA48CAA41A8DF43131C54 /* App */,
+				C26CB46EBABDC216ACAA17F4 /* Models */,
+				05AC8CCF42028C039413E77B /* Services */,
+				D603C54BAAC0F162FBD350F1 /* Views */,
+				DEEAF2D9DEA74EA027C39082 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C26CB46EBABDC216ACAA17F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F233B81E44AEB27DC41871A /* DSPPreset.swift */,
+				F913F6A5DD643BB3EC676189 /* PlayerState.swift */,
+				48EEE15B5F3F516B45C5D1AF /* VolumioDevice.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D603C54BAAC0F162FBD350F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				25592826CCCE0B88F5779905 /* DeviceActionsSection.swift */,
+				5DE34E26650F2F46398F068A /* DevicePickerSection.swift */,
+				05EB3ADC1A0FDF962C996F7B /* EQSection.swift */,
+				279CAA846D06B59702CB6EBD /* MenuBarContentView.swift */,
+				EB7915211FCF4FF21688813C /* NowPlayingSection.swift */,
+				D164E151736F3E0C04EFD78D /* PlaybackControlsSection.swift */,
+				1BAF7A5AAAD74920D5DC4592 /* VolumeControlSection.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DEEAF2D9DEA74EA027C39082 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03A2AF1916790752C3D849B1 /* VolumioMenuBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEEDA48CAA41A8DF43131C54 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				680FAF33288F74B3A3DFDA67 /* AppState.swift */,
+				DB5D06FE4F5B4B7EF2F229C2 /* VolumioMenuBarApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F9C4E8909BBCD2462E35214 /* VolumioMenuBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 680AE07BF252ECE7EF55A658 /* Build configuration list for PBXNativeTarget "VolumioMenuBar" */;
+			buildPhases = (
+				DA0092B9F911D5A7AACB33B6 /* Sources */,
+				AE0A0F219BBA3433C21C23B4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VolumioMenuBar;
+			packageProductDependencies = (
+				B391964FA0AC80BC3F5E0282 /* SocketIO */,
+			);
+			productName = VolumioMenuBar;
+			productReference = 03A2AF1916790752C3D849B1 /* VolumioMenuBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DC0561440D975D3B66BCE96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					0F9C4E8909BBCD2462E35214 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0FBBDB932F4C25EA183DDB88 /* Build configuration list for PBXProject "VolumioMenuBar" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 358BA6B323F0EECF52ADB43F;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				335A3A2ECB698630862EF4CA /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F9C4E8909BBCD2462E35214 /* VolumioMenuBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA0092B9F911D5A7AACB33B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3190F13964D92A6357D740A7 /* AppState.swift in Sources */,
+				1E1021D9546DEF0559D2F37E /* DSPPreset.swift in Sources */,
+				77E8655806FA772CBAC541C0 /* DeviceActionsSection.swift in Sources */,
+				B4A383D096CB0B66B9A8EE28 /* DeviceDiscoveryService.swift in Sources */,
+				686B7901989721ECC9C6CBDD /* DevicePickerSection.swift in Sources */,
+				EC84A7261625703EB76471C0 /* EQSection.swift in Sources */,
+				6A5885F98DEAACBD8C1A6B12 /* FusionDSPService.swift in Sources */,
+				0AFD4B260236197829A6496C /* MenuBarContentView.swift in Sources */,
+				28C627F15D32B56727839720 /* NowPlayingSection.swift in Sources */,
+				71699BCD9171B5FA281A4003 /* PlaybackControlsSection.swift in Sources */,
+				298A6E2F4F9AF430DAAF14DB /* PlayerState.swift in Sources */,
+				458158E0C1B8EAFFDAA71BD4 /* VolumeControlSection.swift in Sources */,
+				E16AF1837CD293A225622AB3 /* VolumioConnection.swift in Sources */,
+				DCF227E730640B179E707DBF /* VolumioDevice.swift in Sources */,
+				62215D69D3B4794E4D533CDA /* VolumioMenuBarApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8B394CC62C05E8919CE235D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VolumioMenuBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.volumio.menubar;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		9B2737B0D08B3C8D256ECB64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BF12AEBEDAD36581ABB6BE99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F1B07E23B1052476C4AD32C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VolumioMenuBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.volumio.menubar;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0FBBDB932F4C25EA183DDB88 /* Build configuration list for PBXProject "VolumioMenuBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B2737B0D08B3C8D256ECB64 /* Debug */,
+				BF12AEBEDAD36581ABB6BE99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		680AE07BF252ECE7EF55A658 /* Build configuration list for PBXNativeTarget "VolumioMenuBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B394CC62C05E8919CE235D9 /* Debug */,
+				F1B07E23B1052476C4AD32C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		335A3A2ECB698630862EF4CA /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				kind = exactVersion;
+				version = 16.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B391964FA0AC80BC3F5E0282 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 335A3A2ECB698630862EF4CA /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 1DC0561440D975D3B66BCE96 /* Project object */;
+}
