@@ -68,6 +68,10 @@ Download the latest `.zip` from [Releases](../../releases), extract it, and drag
 
 Or build from source using the instructions above.
 
+## Discussion
+
+Questions, feedback, and feature requests: [Volumio Community Forum](https://community.volumio.com/t/macos-app-volumiomenubar-a-native-macos-menu-bar-app-for-volumio/75669)
+
 ## License
 
 [MIT](LICENSE)
