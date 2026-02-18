@@ -72,6 +72,10 @@ Or build from source using the instructions above.
 
 Questions, feedback, and feature requests: [Volumio Community Forum](https://community.volumio.com/t/macos-app-volumiomenubar-a-native-macos-menu-bar-app-for-volumio/75669)
 
+## Support ☕️
+
+If you enjoy VolumioMenuBar, consider [buying me a coffee](https://buymeacoffee.com/squadgazzz)!
+
 ## License
 
 [MIT](LICENSE)
