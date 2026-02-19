@@ -33,7 +33,7 @@ cp AppIcon.icns "${APP_BUNDLE}/Contents/Resources/AppIcon.icns"
 sed -e 's/$(DEVELOPMENT_LANGUAGE)/en/g' \
     -e 's/$(EXECUTABLE_NAME)/'"${APP_NAME}"'/g' \
     -e 's/$(PRODUCT_BUNDLE_IDENTIFIER)/com.volumio.menubar/g' \
-    -e 's/$(PRODUCT_NAME)/'"${APP_NAME}"'/g' \
+    -e 's/$(PRODUCT_NAME)/Volumio Menu Bar/g' \
     Info.plist > "${APP_BUNDLE}/Contents/Info.plist"
 
 echo "==> Code-signing (ad-hoc)..."
