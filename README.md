@@ -44,7 +44,7 @@ A native macOS menu bar app for controlling [Volumio](https://volumio.com) music
 ## Requirements
 
 - macOS 14.0 (Sonoma) or later
-- Swift 5.9+ / Xcode 16.0+
+- Swift 5.9+ (Xcode or Command Line Tools)
 
 ## Build
 
@@ -54,13 +54,7 @@ Using the included build script:
 ./build.sh
 ```
 
-This compiles a release build, creates a signed `.app` bundle, and optionally installs it to `/Applications`.
-
-Alternatively, build with SwiftPM directly:
-
-```bash
-swift build -c release
-```
+This builds a universal binary (arm64 + x86_64), creates a signed `.app` bundle, and optionally installs it to `/Applications`.
 
 ## Install
 
