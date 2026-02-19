@@ -8,14 +8,18 @@ APP_NAME="VolumioMenuBar"
 APP_BUNDLE="${APP_NAME}.app"
 ENTITLEMENTS="${APP_NAME}.entitlements"
 
-echo "==> Building ${APP_NAME} (release)..."
-swift build -c release
+echo "==> Building ${APP_NAME} (arm64)..."
+swift build -c release --triple arm64-apple-macosx
 
-BINARY=$(swift build -c release --show-bin-path)/${APP_NAME}
-if [ ! -f "$BINARY" ]; then
-    echo "Error: Binary not found at ${BINARY}"
-    exit 1
-fi
+echo "==> Building ${APP_NAME} (x86_64)..."
+swift build -c release --triple x86_64-apple-macosx
+
+echo "==> Creating universal binary..."
+BINARY=.build/${APP_NAME}-universal
+lipo -create \
+    .build/arm64-apple-macosx/release/${APP_NAME} \
+    .build/x86_64-apple-macosx/release/${APP_NAME} \
+    -output "$BINARY"
 
 echo "==> Creating app bundle..."
 rm -rf "${APP_BUNDLE}"
