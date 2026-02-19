@@ -2,6 +2,15 @@ import SwiftUI
 
 struct DevicePickerSection: View {
     @Environment(AppState.self) private var appState
+    @AppStorage("showOnlyActiveDevices") private var showOnlyActive = false
+    @AppStorage("showDeviceIP") private var showDeviceIP = false
+
+    private var visibleDevices: [VolumioDevice] {
+        let allDevices = appState.discovery.devices
+        guard showOnlyActive else { return allDevices }
+        let selectedID = appState.selectedDevice?.id
+        return allDevices.filter { $0.isOnline || $0.id == selectedID }
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
@@ -9,6 +18,14 @@ struct DevicePickerSection: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
+
+            HStack(spacing: 12) {
+                Toggle("Active only", isOn: $showOnlyActive)
+                Toggle("Show IP", isOn: $showDeviceIP)
+            }
+            .toggleStyle(.switch)
+            .controlSize(.mini)
+            .font(.caption2)
 
             if appState.discovery.devices.isEmpty {
                 HStack(spacing: 6) {
@@ -20,7 +37,7 @@ struct DevicePickerSection: View {
                 }
                 .padding(.vertical, 4)
             } else {
-                ForEach(appState.discovery.devices) { device in
+                ForEach(visibleDevices) { device in
                     Button {
                         if device.isOnline {
                             appState.selectDevice(device)
@@ -31,7 +48,7 @@ struct DevicePickerSection: View {
                                 .fill(device.isOnline ? Color.green : Color.gray)
                                 .frame(width: 8, height: 8)
 
-                            Text(device.name)
+                            Text(deviceLabel(device))
                                 .lineLimit(1)
 
                             Spacer()
@@ -53,5 +70,9 @@ struct DevicePickerSection: View {
         .onChange(of: appState.discovery.devices) { _, _ in
             appState.autoConnectIfNeeded()
         }
+    }
+
+    private func deviceLabel(_ device: VolumioDevice) -> String {
+        showDeviceIP ? "\(device.name) (\(device.host))" : device.name
     }
 }

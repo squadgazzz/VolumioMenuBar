@@ -105,6 +105,8 @@ final class DeviceDiscoveryService {
                         )
                         if let idx = self.devices.firstIndex(where: { $0.id == deviceUUID }) {
                             self.devices[idx] = device
+                        } else if let idx = self.devices.firstIndex(where: { $0.name.caseInsensitiveCompare(deviceName) == .orderedSame }) {
+                            self.devices[idx] = device
                         } else {
                             self.devices.append(device)
                         }
