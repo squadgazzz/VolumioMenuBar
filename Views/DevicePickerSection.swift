@@ -19,14 +19,6 @@ struct DevicePickerSection: View {
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
 
-            HStack(spacing: 12) {
-                Toggle("Active only", isOn: $showOnlyActive)
-                Toggle("Show IP", isOn: $showDeviceIP)
-            }
-            .toggleStyle(.switch)
-            .controlSize(.mini)
-            .font(.caption2)
-
             if appState.discovery.devices.isEmpty {
                 HStack(spacing: 6) {
                     ProgressView()

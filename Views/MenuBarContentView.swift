@@ -1,10 +1,7 @@
 import SwiftUI
-import ServiceManagement
 
 struct MenuBarContentView: View {
     @Environment(AppState.self) private var appState
-
-    @State private var launchAtLogin = SMAppService.mainApp.status == .enabled
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -45,21 +42,9 @@ struct MenuBarContentView: View {
             Divider()
                 .padding(.vertical, 4)
 
-            Toggle("Launch at Login", isOn: $launchAtLogin)
-                .toggleStyle(.checkbox)
+            SettingsSection()
                 .padding(.horizontal, 12)
                 .padding(.vertical, 4)
-                .onChange(of: launchAtLogin) { _, newValue in
-                    do {
-                        if newValue {
-                            try SMAppService.mainApp.register()
-                        } else {
-                            try SMAppService.mainApp.unregister()
-                        }
-                    } catch {
-                        launchAtLogin = !newValue
-                    }
-                }
 
             Button("Quit") {
                 NSApplication.shared.terminate(nil)
