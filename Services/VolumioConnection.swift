@@ -9,6 +9,7 @@ final class VolumioConnection {
     var connectURL: String = ""
 
     var onPushState: ((PlayerState) -> Void)?
+    var onPushQueue: (([QueueItem]) -> Void)?
     var onPushInstalledPlugins: (([[String: Any]]) -> Void)?
     var onPushUiConfig: (([String: Any]) -> Void)?
 
@@ -50,6 +51,7 @@ final class VolumioConnection {
                 self.statusMessage = "Connected"
             }
             self.socket?.emit("getState")
+            self.socket?.emit("getQueue")
             self.socket?.emit("getInstalledPlugins")
         }
 
@@ -86,6 +88,17 @@ final class VolumioConnection {
             let state = PlayerState.from(dict: dict)
             DispatchQueue.main.async {
                 self?.onPushState?(state)
+            }
+            if !state.volatile {
+                self?.socket?.emit("getQueue")
+            }
+        }
+
+        socket?.on("pushQueue") { [weak self] data, _ in
+            guard let items = data.first as? [[String: Any]] else { return }
+            let queue = items.map { QueueItem.from(dict: $0) }
+            DispatchQueue.main.async {
+                self?.onPushQueue?(queue)
             }
         }
 
@@ -148,6 +161,10 @@ final class VolumioConnection {
 
     func previous() {
         socket?.emit("prev")
+    }
+
+    func playIndex(_ index: Int) {
+        socket?.emit("play", ["value": index])
     }
 
     // MARK: - Volume

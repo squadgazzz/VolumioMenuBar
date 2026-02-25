@@ -7,6 +7,7 @@ final class AppState {
     var selectedDevice: VolumioDevice?
     var connection: VolumioConnection?
     var playerState: PlayerState?
+    var queue: [QueueItem] = []
     var fusionDSP = FusionDSPService()
 
     private static let lastDeviceUUIDKey = "lastConnectedDeviceUUID"
@@ -23,6 +24,7 @@ final class AppState {
     func selectDevice(_ device: VolumioDevice) {
         connection?.disconnect()
         playerState = nil
+        queue = []
         selectedDevice = device
         lastConnectedDeviceUUID = device.id
 
@@ -32,6 +34,12 @@ final class AppState {
 
         conn.onPushState = { [weak self] state in
             self?.playerState = state
+            if state.volatile {
+                self?.queue = []
+            }
+        }
+        conn.onPushQueue = { [weak self] items in
+            self?.queue = items
         }
         conn.onPushInstalledPlugins = { [weak self] plugins in
             self?.fusionDSP.handleInstalledPlugins(plugins)
@@ -55,6 +63,7 @@ final class AppState {
         connection?.disconnect()
         connection = nil
         playerState = nil
+        queue = []
         selectedDevice = nil
     }
 

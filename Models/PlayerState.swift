@@ -7,6 +7,7 @@ struct PlayerState {
     var album: String
     var albumart: String
     var uri: String
+    var position: Int // index in queue
     var seek: Int // milliseconds
     var duration: Int // seconds
     var volume: Int // 0-100
@@ -42,6 +43,7 @@ struct PlayerState {
             album: dict["album"] as? String ?? "",
             albumart: dict["albumart"] as? String ?? "",
             uri: dict["uri"] as? String ?? "",
+            position: dict["position"] as? Int ?? 0,
             seek: dict["seek"] as? Int ?? 0,
             duration: dict["duration"] as? Int ?? 0,
             volume: dict["volume"] as? Int ?? 0,

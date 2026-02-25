@@ -23,6 +23,12 @@ A native macOS menu bar app for controlling [Volumio](https://volumio.com) music
 - Seek bar with real-time progress tracking and drag-to-seek
 - The seek bar is greyed out and disabled for volatile services (which don't support external seeking) and when playback is stopped
 
+### Playback Queue
+- Collapsible "Up Next" section showing upcoming tracks from the queue
+- Click any track to jump to it
+- Loads 5 tracks at a time with scroll-to-load-more
+- Automatically hidden for volatile services (Spotify Connect, Tidal Connect) whose queues are managed externally
+
 ### FusionDSP Integration
 - Detects whether the FusionDSP plugin is installed and active
 - Enable/disable the DSP effect with a checkbox (without restarting the plugin)
@@ -35,10 +41,15 @@ A native macOS menu bar app for controlling [Volumio](https://volumio.com) music
 - Reboot the device (with a confirmation prompt; auto-reconnects after restart)
 - Shut down the device (with a confirmation prompt)
 
+### Settings
+- Collapsible Settings section with toggle switches for:
+  - Launch at Login
+  - Hide inactive devices
+  - Show device IP
+
 ### General
 - Runs in the macOS menu bar with a custom VU-meter-style icon — no Dock icon
-- Collapsible UI sections (FusionDSP, Device) that remember their expanded/collapsed state
-- Optional launch at login
+- Collapsible UI sections (FusionDSP, Device, Up Next, Settings) that remember their expanded/collapsed state
 - Real-time state updates via Socket.IO
 
 ## Requirements

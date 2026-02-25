@@ -73,6 +73,15 @@ struct MenuBarContentView: View {
             .padding(.horizontal, 12)
             .padding(.vertical, 4)
 
+        if !appState.queue.isEmpty && appState.playerState?.volatile != true {
+            Divider()
+                .padding(.vertical, 4)
+
+            QueueSection()
+                .padding(.horizontal, 12)
+                .padding(.vertical, 4)
+        }
+
         if appState.fusionDSP.isInstalled && appState.fusionDSP.isActive {
             Divider()
                 .padding(.vertical, 4)
