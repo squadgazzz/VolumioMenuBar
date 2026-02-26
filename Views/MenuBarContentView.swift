@@ -46,10 +46,13 @@ struct MenuBarContentView: View {
                 .padding(.horizontal, 12)
                 .padding(.vertical, 4)
 
-            Button("Quit") {
-                NSApplication.shared.terminate(nil)
+            HStack {
+                Spacer()
+                Button("Quit") {
+                    NSApplication.shared.terminate(nil)
+                }
+                .keyboardShortcut("q")
             }
-            .keyboardShortcut("q")
             .padding(.horizontal, 12)
             .padding(.vertical, 4)
             .padding(.bottom, 8)
@@ -91,11 +94,5 @@ struct MenuBarContentView: View {
                 .padding(.vertical, 4)
         }
 
-        Divider()
-            .padding(.vertical, 4)
-
-        DeviceActionsSection()
-            .padding(.horizontal, 12)
-            .padding(.vertical, 4)
     }
 }
