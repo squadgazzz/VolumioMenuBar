@@ -1,8 +1,8 @@
 # VolumioMenuBar
 
 A native macOS menu bar app for controlling [Volumio](https://volumio.com) music servers on your local network.
-<img width="366" height="672" alt="Screenshot 2026-02-26 at 12 14 58 PM" src="https://github.com/user-attachments/assets/8b1ae429-5b20-48c4-bff5-9e8e4fd7c21d" /><img width="366" height="363" alt="Screenshot 2026-02-26 at 12 15 17 PM" src="https://github.com/user-attachments/assets/27c5c8b6-4e89-43ba-96a5-3fdfa9ac2c61" />
 
+<img width="366" height="672" alt="Screenshot 2026-02-26 at 12 22 53 PM" src="https://github.com/user-attachments/assets/e39fa4b4-9b68-4979-bebe-dbcc2ab26278" /><img width="366" height="363" alt="Screenshot 2026-02-26 at 12 23 15 PM" src="https://github.com/user-attachments/assets/fc7e1a6a-00d2-4feb-8e23-9d93908a183c" />
 
 
 ## Features
