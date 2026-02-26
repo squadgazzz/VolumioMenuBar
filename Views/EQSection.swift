@@ -25,7 +25,8 @@ struct EQSection: View {
 
             if isExpanded {
                 Toggle("Effect Enabled", isOn: effectEnabledBinding)
-                    .toggleStyle(.checkbox)
+                    .toggleStyle(.switch)
+                    .controlSize(.mini)
                     .font(.caption)
 
                 if appState.fusionDSP.isActive {
