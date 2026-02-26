@@ -37,9 +37,9 @@ A native macOS menu bar app for controlling [Volumio](https://volumio.com) music
 - Gracefully handles DSP types that don't support presets (EQ3, purecgui)
 
 ### Device Management
-- Open the Volumio web UI in a browser
-- Reboot the device (with a confirmation prompt; auto-reconnects after restart)
-- Shut down the device (with a confirmation prompt)
+- Inline action buttons on the selected device row: open Web UI, reboot, and shut down
+- Reboot and shut down require confirmation before executing
+- Reboot auto-reconnects after restart
 
 ### Settings
 - Collapsible Settings section with toggle switches for:
@@ -49,7 +49,7 @@ A native macOS menu bar app for controlling [Volumio](https://volumio.com) music
 
 ### General
 - Runs in the macOS menu bar with a custom VU-meter-style icon — no Dock icon
-- Collapsible UI sections (FusionDSP, Device, Up Next, Settings) that remember their expanded/collapsed state
+- Collapsible UI sections (FusionDSP, Up Next, Settings) that remember their expanded/collapsed state
 - Real-time state updates via Socket.IO
 
 ## Requirements
