@@ -27,7 +27,6 @@ A native macOS menu bar app for controlling [Volumio](https://volumio.com) music
 ### Playback Queue
 - Collapsible "Up Next" section showing upcoming tracks from the queue
 - Click any track to jump to it
-- Loads 5 tracks at a time with scroll-to-load-more
 - Automatically hidden for volatile services (Spotify Connect, Tidal Connect) whose queues are managed externally
 
 ### FusionDSP Integration
