@@ -170,11 +170,15 @@ struct DevicePickerSection: View {
     }
 }
 
+private class PassthroughView: NSView {
+    override func hitTest(_ point: NSPoint) -> NSView? { nil }
+}
+
 private struct TooltipView: NSViewRepresentable {
     let tooltip: String
 
     func makeNSView(context: Context) -> NSView {
-        let view = NSView()
+        let view = PassthroughView()
         view.toolTip = tooltip
         return view
     }
